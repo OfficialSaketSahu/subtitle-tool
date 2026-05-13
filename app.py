@@ -1,5 +1,5 @@
 import streamlit as st
-import whisperx
+import whisper
 import torch
 import tempfile
 import os
@@ -58,24 +58,7 @@ if uploaded_audio and uploaded_script:
 
         with st.spinner("Loading WhisperX model..."):
 
-            model = whisperx.load_model(
-                "small",
-                device,
-                language="de"
-            )
-
-        audio = whisperx.load_audio(audio_path)
-
-        with st.spinner("Transcribing audio..."):
-
-            result = model.transcribe(audio)
-
-        with st.spinner("Aligning subtitles..."):
-
-            model_a, metadata = whisperx.load_align_model(
-                language_code="de",
-                device=device
-            )
+           model = whisper.load_model("small") result = model.transcribe( audio_path, language="de", word_timestamps=True )
 
             result = whisperx.align(
                 result["segments"],
