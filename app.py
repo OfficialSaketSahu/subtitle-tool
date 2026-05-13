@@ -58,7 +58,7 @@ if uploaded_audio and uploaded_script:
 
         with st.spinner("Loading WhisperX model..."):
 
-           model = whisper.load_model("small") result = model.transcribe( audio_path, language="de", word_timestamps=True )
+           model = whisper.load_model("tiny") result = model.transcribe( audio_path, language="de", word_timestamps=True )
 
             result = whisperx.align(
                 result["segments"],
