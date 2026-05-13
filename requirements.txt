@@ -1,5 +1,5 @@
 streamlit
-whisperx
+openai-whisper
 torch
 torchaudio
 ctranslate2==4.4.0
