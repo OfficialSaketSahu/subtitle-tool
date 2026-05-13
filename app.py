@@ -59,7 +59,7 @@ if uploaded_audio and uploaded_script:
         with st.spinner("Loading WhisperX model..."):
 
             model = whisperx.load_model(
-                "large-v2",
+                "small",
                 device,
                 language="de"
             )
