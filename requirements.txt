@@ -1,0 +1,6 @@
+streamlit
+whisperx
+torch
+torchaudio
+ctranslate2==4.4.0
+faster-whisper==1.0.0
