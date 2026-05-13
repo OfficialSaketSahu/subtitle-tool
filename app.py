@@ -88,7 +88,16 @@ if uploaded_audio and uploaded_script:
 
         script_words = script_text.split()
 
-        audio_words = result["word_segments"]
+       audio_words = []
+
+for segment in result["segments"]:
+
+    if "words" not in segment:
+        continue
+
+    for word in segment["words"]:
+
+        audio_words.append(word)
 
         # SMART WORD CORRECTION
         for i in range(min(len(audio_words), len(script_words))):
