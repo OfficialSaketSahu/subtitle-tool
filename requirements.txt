@@ -1,7 +1,6 @@
-streamlit
-openai-whisper
-torch
-torchaudio
-ctranslate2==4.4.0
-faster-whisper==1.0.0
-ctranslate2>=4.5.0
+streamlit==1.45.1
+openai-whisper==20240930
+torch==2.2.2
+torchaudio==2.2.2
+numpy==1.26.4
+ffmpeg-python==0.2.0
